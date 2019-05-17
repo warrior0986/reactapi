@@ -32,7 +32,7 @@ class Stream extends \yii\db\ActiveRecord
     {
         return [
             [['title', 'user_id'], 'required'],
-            [['description'], 'string'],
+            [['description', 'userId'], 'string'],
             [['user_id'], 'integer'],
             [['title'], 'string', 'max' => 50],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
